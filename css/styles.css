@@ -261,6 +261,10 @@ body {
     display: flex;
     gap: 24px;
 }
+.mision-item {
+    width: calc((100%-72px)/4);
+}
+
 .mision-item .title {
     margin-bottom: 8px;
 }
@@ -312,7 +316,8 @@ body {
 }
 .image {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
 
 }
 
@@ -326,10 +331,7 @@ body {
 .team-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
-   
-
+    gap: 24px;
 }
 
 .team-list {
