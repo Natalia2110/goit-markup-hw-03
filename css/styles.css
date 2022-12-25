@@ -9,7 +9,8 @@
     --accent-color: #E7E9FC;
     --bacground-button-color:  #F4F4FD;
     --button-active-color: #404BBF;
-    
+    --margin-left-gallery: 24px;
+    --margin-top-gallery: 48px;
 }
 
 p,
@@ -59,14 +60,14 @@ body {
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    
     background-color: var(--white-title-color);
     border-bottom: 1px solid var(--accent-color);
 
 }
 .header>.container {
     display: flex;
+    align-items: center ;
 }
 
 .navigation {
@@ -91,20 +92,34 @@ body {
     
     
 }
+.logo-gap {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 76px;
+}
+
 .logo .logo-first{
     color: var(--titele-color);
-    margin-right: 76px;
     
-
 }
 
 .navigation-list,
-.contacts  {
+.contacts {
     display: flex;
-    gap: 40px;
+    
 }
 
+.navigation-list .nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
 .studio-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -124,6 +139,10 @@ body {
 }
 
 .portfolio-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -142,6 +161,10 @@ body {
     color: var(--primary-brand-color);
 }
 .contacts-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -160,6 +183,10 @@ body {
 
 
 .contacts-mail {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
@@ -176,13 +203,16 @@ body {
 
 
 .contacts-tel{
-    
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     line-height: 24px;
     letter-spacing: 0.02em;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--body-text-color);
-    
+    margin-left: 40px;
 
 }
 .contacts-tel:hover,
@@ -379,8 +409,14 @@ body {
     display: flex;
     justify-content:center;
     margin-bottom: 72px;
-    gap: 24px;
+    
 }
+
+.button .portfolio-list:not(:last-child) {
+    margin-right: 24px;
+}
+
+
 
 .portfolio-btn {
     display: block;
@@ -413,16 +449,30 @@ body {
 }
 
 
+
 .link {
     text-decoration: none;
 
 }
 
 .gallery {
+
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+    flex-basis: calc(100%/3-24px);
+    margin-top: calc(-1 * var(--margin-top-gallery));
+    margin-left: calc(-1 * var(--margin-left-gallery));
+
+}
+
+
+.gallery > .gallery-list {
+    background-color: var(--white-title-color);
+    margin-top: var(--margin-top-gallery);
+    margin-left: var(--margin-left-gallery);
+    
+
+
 }
 
 .gallery-card {
@@ -434,15 +484,9 @@ body {
    
 
 }
-.gallery-list {
-    background-color: var(--white-title-color);
-    max-width: calc((100%-48px)/3);
-    
-
-
-}
 
 .gallery-list .text {
+    margin-top: 8px;
     color: var(--body-text-color);
 }
 
