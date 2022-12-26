@@ -13,6 +13,13 @@
     --margin-top-gallery: 48px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 p,
 h1,
 h2,
@@ -34,6 +41,7 @@ img {
 }
 
 body {
+
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -184,6 +192,7 @@ body {
 
 .contacts-mail {
     display: block;
+    margin-right: 40px;
     padding-top: 24px;
     padding-bottom: 24px;
 
@@ -212,7 +221,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--body-text-color);
-    margin-left: 40px;
+    
 
 }
 .contacts-tel:hover,
@@ -227,22 +236,21 @@ body {
 /* -----------hero------------ */
 
 .hero.section{
-    background-color: var(--bacground-footer-color);
     padding-top: 188px;
     padding-bottom: 188px;
-    text-align: center;
-    
-    
 
+    text-align: center;
+    background-color: var(--bacground-footer-color);
+   
 }
 
 
-
 .hero-title {
-    max-width: 496px;
-    margin: 0 auto;
-    margin-bottom: 48px;
     
+    max-width: 496px;
+    margin: 0  auto;
+    margin-bottom: 48px;
+
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -253,12 +261,15 @@ body {
 
 }
 .hero-btn {
+    
     min-width: 169px;
-    min-height: 56px;   
+    min-height: 56px;
+    padding: 16px 32px;   
     font-family: inherit;
     font-size: inherit;
     font-weight: 500;
     line-height: 1.19;
+
     align-items: center;
     letter-spacing: 0.04em;
     cursor: pointer;
@@ -390,10 +401,15 @@ body {
 }
 .footer-logo {
     color: var(--bacground-button-color);
+    
+}
+
+.footer .logo {
+    margin-bottom: 16px;
 }
 .footer-text {
     max-width: 264px;
-    margin-top: 16px;
+    
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--accent-color)
@@ -484,9 +500,11 @@ body {
    
 
 }
+.gallery-card >.title {
+    margin-bottom: 8px;
+}
 
 .gallery-list .text {
-    margin-top: 8px;
     color: var(--body-text-color);
 }
 
