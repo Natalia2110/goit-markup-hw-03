@@ -246,7 +246,8 @@ body {
 
 
 .hero-title {
-    
+    width: 496px;
+    margin: 0 auto;
     margin-bottom: 48px;
 
     font-weight: 700;
