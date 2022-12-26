@@ -13,10 +13,13 @@
     --margin-top-gallery: 48px;
 }
 
+html {
+    box-sizing: border-box;
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 
@@ -238,7 +241,7 @@ body {
 .hero.section{
     padding-top: 188px;
     padding-bottom: 188px;
-
+    
     text-align: center;
     background-color: var(--bacground-footer-color);
    
@@ -246,9 +249,9 @@ body {
 
 
 .hero-title {
+    
     width: 496px;
-    margin: 0 auto;
-    margin-bottom: 48px;
+    margin: 0 auto 48px;
 
     font-weight: 700;
     font-size: 56px;
@@ -260,7 +263,7 @@ body {
 
 }
 .hero-btn {
-    
+    display: inline-block   ;
     min-width: 169px;
     min-height: 56px;
     padding: 16px 32px;   
@@ -474,17 +477,15 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    flex-basis: calc(100%/3-24px);
-    margin-top: calc(-1 * var(--margin-top-gallery));
-    margin-left: calc(-1 * var(--margin-left-gallery));
+    column-gap: var(--margin-left-gallery);
+    row-gap: var(--margin-top-gallery);
 
 }
 
 
 .gallery > .gallery-list {
     background-color: var(--white-title-color);
-    margin-top: var(--margin-top-gallery);
-    margin-left: var(--margin-left-gallery);
+    flex-basis: calc((100% - 48px) / 3);
     
 
 
