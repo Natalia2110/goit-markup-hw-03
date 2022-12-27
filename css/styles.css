@@ -460,7 +460,7 @@ body {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     color: var(--white-title-color);
-    background-color: var(--primary-brand-color);
+    background-color: var(--button-active-colorr);
 
 }
 .portfolio-btn:active {
